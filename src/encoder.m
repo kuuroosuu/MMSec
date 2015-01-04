@@ -4,7 +4,7 @@ function [ audio ] = encoder( audio )
 %   Shen
 two_D_audio = audio22D(audio);
 [DC_array U sigma V] = DC(two_D_audio);
-DC_cell = spiltDXD(DC_array, 4);
+DC_cell = spiltDxD(DC_array, 4);
 DC_cell_size = size(DC_cell);
 DCT_cell = {};
 for i = 1:DC_cell_size(1)
