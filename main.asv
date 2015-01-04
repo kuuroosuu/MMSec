@@ -1,2 +1,12 @@
-[y,Fs] = audioread('music\F.mp3');
-sound(y,Fs);
+clc
+clear all
+close all
+addpath('src');
+cell = {[1 2 3], [3 4 5];[7 8 9], [9 9 9];[8 8 8], [7 7 7]};
+k = size(cell);
+k(1)
+cellk = {};
+cellk = [cell, cell];
+cellk = [cellk;];
+cellk = [cellk]
+kk = [cell{1,1} cell{1,1}];

@@ -1,9 +1,0 @@
-function [ output ] = audio22D( au )
-%AUDIO22D Summary of this function goes here
-%   Detailed explanation goes here
-long = size(au,2)
-col = floor(sqrt(long));
-rest = long - col*col;
-
-end
-
