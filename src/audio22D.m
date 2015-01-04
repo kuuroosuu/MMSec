@@ -4,10 +4,10 @@ function [ output ] = audio22D( au )
 disp('audio22D Begin ...');
 
 if(exist('src\cache\audio22D.mat','file'))
-    load('src\cache\audio22D.mat');
-    disp('Done');
-    return;
-end
+     load('src\cache\audio22D.mat');
+     disp('Done');
+     return;
+ end
 
 output = [];
 col = floor(sqrt(length(au)));
