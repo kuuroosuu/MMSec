@@ -16,7 +16,7 @@ for i = 1:DC_cell_size(1)
     DCT_cell = [DCT_cell;row];
 end
 
-[coefficients_pairs watermark] = watermarkGen();
+[coefficients_pairs watermark] = watermarkGen(DC_cell_size(1));
 DCT_embedded = embed(DCT_cell,coefficients_pairs,watermark);
 DC_embedded = [];
 DCT_size = size(DCT_embedded);
@@ -35,9 +35,24 @@ for i = 1:DC_size(1)
         sigma{i,j}(1,1) = DC_embedded(i,j);
     end
 end
+forsize = size(sigma);
+embedded2D = [];
+for i =1:forsize(1)
+    row = [];
+    for j =1:forsize(2)
+        tmp = S{i,j}*sigma{i,j}*V{i,j};
+        row = [row tmp];
+    end
+    embedded2D = [embedded2D;row];
+end
 
-for i =1:
-
+forsize = size(embedded2D);
+audio_embedded = [];
+for i=1:forsize(1)
+    for j =1:forsize(2)
+        audio_embedded = [audio_embedded,embedded2D(i,j) ]
+    end   
+end
 
 end
 
