@@ -1,6 +1,7 @@
 function [ DCmat, U, Sigma, V ] = DC( au2D )
 % lindol
 
+disp('DC Begin ...');
 auCell = splitDxD(au2D, 8);
 DCmat = zeros(size(auCell));
 U = cell(size(auCell));
@@ -15,6 +16,7 @@ for i = 1 : size(auCell,1)
         V{i,j} = v;
     end
 end
+disp('Done');
 
 end
 

@@ -1,12 +1,16 @@
-function [ audio ] = encoder( audio )
+function [ audio,Fs,coefficients_pairs, watermark] = encoder( filename )
 %ENCODER Summary of this function goes here
 %   Detailed explanation goes here
 %   Shen
+disp('Encoder Begin ...');
+[audio,Fs] = audioread(filename);
 two_D_audio = audio22D(audio);
 [DC_array U sigma V] = DC(two_D_audio);
-DC_cell = spiltDxD(DC_array, 4);
+DC_cell = splitDxD(DC_array, 4);
 DC_cell_size = size(DC_cell);
 DCT_cell = {};
+DC_cell
+pause
 for i = 1:DC_cell_size(1)
     row = {};
     for j = 1:DC_cell_size(2)
@@ -15,6 +19,8 @@ for i = 1:DC_cell_size(1)
     end
     DCT_cell = [DCT_cell;row];
 end
+DCT_cell
+pause
 
 [coefficients_pairs watermark] = watermarkGen(DC_cell_size(1));
 DCT_embedded = embed(DCT_cell,coefficients_pairs,watermark);
@@ -56,7 +62,7 @@ for i=1:forsize(1)
         index = index+1;
     end   
 end
-
+disp('Done');
 
 end
 
