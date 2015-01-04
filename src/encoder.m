@@ -47,7 +47,7 @@ for i =1:forsize(1)
 end
 
 forsize = size(embedded2D);
-audio_embedded = [];
+% audio_embedded = [];
 index = 1;
 for i=1:forsize(1)
     for j =1:forsize(2)
@@ -56,7 +56,7 @@ for i=1:forsize(1)
         index = index+1;
     end   
 end
-
+% 888888888888888888888888888888888888888
 
 end
 
