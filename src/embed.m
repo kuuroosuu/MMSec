@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-function [ output_args ] = embed( input_args )
-%EMBED Summary of this function goes here
-%   Detailed explanation goes here
-<<<<<<< HEAD
-123
-=======
 function [ DC ] = embed( DC, pos, watermark )
 % lindol
 
@@ -28,10 +21,6 @@ for i = 1 : size(DC,1)
         DC{i,j} = mat;
     end
 end
->>>>>>> lindol-branch
-=======
-
->>>>>>> origin/Shen-branches
 
 end
 
