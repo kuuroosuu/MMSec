@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+cell = {};
+a = [1;2];
+for i = 0 : 5
+    cell = [cell, a*2];
+end
+=======
 clc
 clear all
 close all
@@ -23,3 +30,4 @@ end
 DCT_cell;
 DCT_cell(1,2) = 10000;
 DCT_cell
+>>>>>>> origin/master
