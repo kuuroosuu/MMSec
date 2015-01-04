@@ -17,7 +17,7 @@ for i = 1:DC_cell_size(1)
     end
     DCT_cell = [DCT_cell;row];
 end
-reduce = 20;
+reduce = 1;
 [coefficients_pairs, watermark] = watermarkGen(floor(DC_cell_size(1)/reduce));
 DCT_embedded = embed(DCT_cell,coefficients_pairs,watermark);
 %%%%%%%%%%%%%%%%%%%%%%%
