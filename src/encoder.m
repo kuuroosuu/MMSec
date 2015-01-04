@@ -1,4 +1,4 @@
-function [ output_args ] = encoder( audio )
+function [ audio ] = encoder( audio )
 %ENCODER Summary of this function goes here
 %   Detailed explanation goes here
 %   Shen
@@ -48,11 +48,15 @@ end
 
 forsize = size(embedded2D);
 audio_embedded = [];
+index = 1;
 for i=1:forsize(1)
     for j =1:forsize(2)
-        audio_embedded = [audio_embedded,embedded2D(i,j) ]
+%         audio_embedded = [audio_embedded,embedded2D(i,j) ];
+        audio(index) = embedded2D(i,j);
+        index = index+1;
     end   
 end
+
 
 end
 
