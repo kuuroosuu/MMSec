@@ -1,0 +1,16 @@
+function [ num ] = mask( FourbyFour )
+%MASK Summary of this function goes here
+%   Detailed explanation goes here
+
+edge = 0;
+edge = edge + FourbyFour(4,1);
+edge = edge + FourbyFour(3,2);
+edge = edge + FourbyFour(4,2);
+edge = edge + FourbyFour(3,3);
+edge = edge + FourbyFour();
+edge = edge + FourbyFour();
+edge = edge + FourbyFour();
+edge = edge + FourbyFour();
+
+end
+
