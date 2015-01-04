@@ -1,8 +1,9 @@
 function [ DC ] = embed( DC, pos, watermark )
 % lindol
 
-for i = 1 : size(DC,1)
-    for j = 1 : size(DC,2)
+reduce = 20;
+for i = 1 : min(size(DC,1),size(watermark,2))
+    for j = 1 : floor(size(DC,2)/reduce)
         mat = DC{i,j};
         x1 = pos(i,1); y1 = pos(i,2);
         x2 = pos(i,3); y2 = pos(i,4);

@@ -5,6 +5,7 @@ disp('audio22D Begin ...');
 
 if(exist('src\cache\audio22D.mat','file'))
     load('src\cache\audio22D.mat');
+    disp('Done');
     return;
 end
 
