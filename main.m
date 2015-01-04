@@ -6,4 +6,4 @@ addpath('src\');
 size(watermark,2)
 decoder(audio,pos,watermark)
 sound(audio,Fs);
-% clear sound;
+clear sound;
